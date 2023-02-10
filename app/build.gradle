@@ -33,6 +33,8 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+
 }
 
 dependencies {
@@ -45,6 +47,15 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+
+    // https://github.com/QuickBirdEng/SurveyKit#-library-setup
+    implementation 'com.quickbirdstudios:survey:1.1.0'
+
+    // Solana mobile stack sdks
+    implementation 'com.solanamobile:mobile-wallet-adapter-clientlib:1.0.5'
+    implementation 'com.solanamobile:seedvault-wallet-sdk:0.2.4'
+
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
