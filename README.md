@@ -3,26 +3,31 @@
 </p>
 
 
-SolFit
+Solvays
 ---
 
-## Inspiration
-SolFit was inspired by the growing importance of mental health and wellness in today's fast-paced world. We noticed that many people struggle to maintain a healthy lifestyle and wanted to create an app that would incentivize them to prioritize their fitness and wellness goals.
+### Inspiration
+The inspiration for Solvays came from the growing trend of companies seeking direct feedback from their customers about new product launches. We wanted to provide a platform for users to share their thoughts and opinions, while also incentivizing them for their time and effort through the use of cryptocurrency rewards.
 
-## What it does
-SolFit is a reward app that encourages users to lead a healthy lifestyle by offering cryptocurrency rewards for meeting fitness and wellness goals. The app features a daily mental health survey built using the SurveyKit library, and users are rewarded with Solana micro-rewards after each completion. The app interacts with the Solana network using the Solana Mobile Stack SDK.
+### What it does
+Solvays is a mobile app that allows users to provide feedback on new product launches through custom survays. Each completed survey earns the user Solana micro rewards, creating a mutually beneficial relationship between the user and the company seeking their feedback.
 
-<!-- ## How we built it
-We started by researching various reward and cryptocurrency systems to find the best fit for our app. We chose Solana as our reward currency due to its speed, scalability, and low transaction fees. We then used the SurveyKit library to build a daily mental health survey, and integrated the Solana Mobile Stack SDK to handle transactions and network interaction.
+<!--
 
-## Challenges we ran into
-One of the biggest challenges we faced was integrating the Solana network into our app. We had to spend a lot of time learning about the Solana ecosystem and the Solana Mobile Stack SDK to ensure that we could properly handle transactions and network interaction.
+How we built it
+Solvays was built using the SurveyKit library and integrated with the Solana network through the Solana Mobile Stack SDK. This allowed us to create a seamless experience for users to complete survays and receive their rewards in real-time.
 
-## Accomplishments that we're proud of
-We're proud of the fact that we were able to create a functional app that incentivizes users to prioritize their fitness and wellness goals. We believe that our app can have a positive impact on people's lives and help them lead healthier and happier lives.
+Challenges we ran into
+One of the biggest challenges we faced was integrating the Solana network into the app. However, by utilizing the Solana Mobile Stack SDK, we were able to overcome this challenge and ensure smooth transactions for the users.
 
-## What we learned
-Through building SolFit, we learned about the importance of mental health and the role that technology can play in promoting it. We also learned about the Solana network and how it can be used to reward users for completing various tasks and activities.
+Accomplishments that we're proud of
+We are proud to have created a platform that not only incentivizes users for their valuable feedback but also allows companies to receive direct, actionable insights from their customers.
 
-## What's next for SolFit?
-We plan to continue refining and improving SolFit by adding new features, such as support for additional cryptocurrencies, gamification elements, and integration with wearable fitness devices. We also plan to expand our user base by marketing SolFit to health and wellness communities and promoting it through various channels. -->
+What we learned
+Through the development of Solvays, we learned the importance of seamless integration and user experience in a cryptocurrency-based app. We also learned about the potential for cryptocurrency rewards to drive engagement and participation in survays.
+
+What's next for Solvays?
+In the future, we plan to expand Solvays to include a wider range of survey types and industries. We also hope to add new features to enhance the user experience and make it even more rewarding for our users.
+-->
+
+
