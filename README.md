@@ -2,7 +2,6 @@
     <img src="./img/logo_3_2.png" width=400 />
 </p>
 
-
 Solvays
 ---
 
