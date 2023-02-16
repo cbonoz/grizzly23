@@ -49,10 +49,10 @@ class SurveyFragment : Fragment() {
 //        https://github.com/QuickBirdEng/SurveyKit#create-survey-steps
         steps.add(
             InstructionStep(
-            title = "Begin survey",
-            text = "Series of questions",
-            buttonText = "Start"
-        )
+                title = "Begin survey",
+                text = "Series of questions",
+                buttonText = "Start"
+            )
         )
         surveyQuestions.forEach {
             steps.add(
@@ -66,17 +66,23 @@ class SurveyFragment : Fragment() {
 
         steps.add(
             CompletionStep(
-            title = "Done",
-            text = "Thanks for completing the survey",
-            buttonText = "Get reward"
-        )
+                title = "Done",
+                text = "Thanks for completing the survey",
+                buttonText = "Get reward"
+            )
         )
 
         val task = OrderedTask(steps = steps)
         val configuration = SurveyTheme(
-            themeColorDark = ContextCompat.getColor(requireContext(), R.color.white),
-            themeColor = ContextCompat.getColor(requireContext(), androidx.appcompat.R.color.material_blue_grey_800),
-            textColor = ContextCompat.getColor(requireContext(), R.color.white)
+            themeColorDark = ContextCompat.getColor(requireContext(), R.color.purple_500),
+            themeColor = ContextCompat.getColor(
+                requireContext(),
+                androidx.appcompat.R.color.material_blue_grey_800
+            ),
+            textColor = ContextCompat.getColor(
+                requireContext(),
+                androidx.appcompat.R.color.material_grey_600
+            )
         )
         surveyView.start(task, configuration)
     }
