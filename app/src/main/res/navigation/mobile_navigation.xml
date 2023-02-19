@@ -8,25 +8,26 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.solvays.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="Discover Surveys"
         tools:layout="@layout/fragment_home" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_gallery"-->
-<!--        android:name="com.solvays.ui.gallery.SurveyFragment"-->
-<!--        android:label="@string/menu_gallery"-->
-<!--        tools:layout="@layout/fragment_gallery" />-->
-
-<!--    <fragment-->
-<!--        android:id="@+id/nav_slideshow"-->
-<!--        android:name="com.solvays.ui.slideshow.SlideshowFragment"-->
-<!--        android:label="@string/menu_slideshow"-->
-<!--        tools:layout="@layout/fragment_slideshow" />-->
-
+    <fragment
+        android:id="@+id/nav_results"
+        android:name="com.solvays.ui.result.ResultsFragment"
+        android:label="Completed Surveys"
+        tools:layout="@layout/fragment_results" />
 
     <fragment
         android:id="@+id/nav_survey"
-        android:name="com.solvays.ui.gallery.SurveyFragment"
-        android:label="@string/menu_survey"
+        android:name="com.solvays.ui.survey.SurveyFragment"
+        android:label="Survey"
         tools:layout="@layout/fragment_survey" />
+>
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.solvays.ui.account.AccountFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_account" />
+
 </navigation>

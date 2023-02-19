@@ -7,19 +7,17 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-<!--        <item-->
-<!--            android:id="@+id/nav_gallery"-->
-<!--            android:icon="@drawable/ic_menu_gallery"-->
-<!--            android:title="@string/menu_gallery" />-->
-<!--        <item-->
-<!--            android:id="@+id/nav_slideshow"-->
-<!--            android:icon="@drawable/ic_menu_slideshow"-->
-<!--            android:title="@string/menu_slideshow" />-->
+            android:title="Discover Surveys"/>
 
         <item
-            android:id="@+id/nav_survey"
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="My Account" />
+
+        <item
+            android:id="@+id/nav_results"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_survey" />
+            android:title="View Results" />
+
     </group>
 </menu>

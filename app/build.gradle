@@ -32,9 +32,8 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
-
-
 }
 
 dependencies {
@@ -50,6 +49,10 @@ dependencies {
 
     // https://github.com/QuickBirdEng/SurveyKit#-library-setup
     implementation 'com.quickbirdstudios:survey:1.1.0'
+
+    // Charts
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 
     // Solana mobile stack sdks
     implementation 'com.solanamobile:mobile-wallet-adapter-clientlib:1.0.5'
