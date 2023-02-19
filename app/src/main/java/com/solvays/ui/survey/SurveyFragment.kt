@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.quickbirdstudios.surveykit.FinishReason
@@ -18,6 +19,7 @@ import com.solvays.MainActivity
 import com.solvays.R
 import com.solvays.databinding.FragmentSurveyBinding
 import com.solvays.util.SurveyHelper
+
 
 class SurveyFragment : Fragment() {
 
@@ -54,7 +56,8 @@ class SurveyFragment : Fragment() {
             )
         )
 
-        steps.addAll(SurveyHelper.generateSurveyQuestionSteps(appName))
+        val numQuestions = arguments?.getInt("numQuestions") ?: 5
+        steps.addAll(SurveyHelper.generateSurveyQuestionSteps(appName, numQuestions))
 
         steps.add(
             CompletionStep(
@@ -82,16 +85,30 @@ class SurveyFragment : Fragment() {
         surveyView.start(task, configuration)
 
         surveyView.onSurveyFinish = { taskResult: TaskResult, reason: FinishReason ->
-            // TODO: add success case to remit payment
             if (reason == FinishReason.Discarded) {
                 // route somewhere else
                 (activity as MainActivity).navigateTo(R.id.nav_home)
+            } else if (reason == FinishReason.Completed) {
+                // TODO: add success logic to remit payment to user's saved address.
+                (activity as MainActivity).navigateTo(R.id.nav_home)
             }
         }
+
+        activity?.actionBar?.title = "Survey: $appName"
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
     }
 }

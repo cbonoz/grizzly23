@@ -1,24 +1,27 @@
 package com.solvays.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.widget.SearchView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.solvays.MainActivity
 import com.solvays.R
+import com.solvays.adapter.SurveyAdapter
 import com.solvays.databinding.FragmentHomeBinding
+import com.solvays.model.Survey
 import com.solvays.util.SurveyHelper.Companion.getDemoAppNames
+
 
 class HomeFragment : Fragment() {
     private lateinit var searchView: SearchView
     private lateinit var listView: ListView
-    private lateinit var adapter: ArrayAdapter<String>
-    private lateinit var boxList: ArrayList<String>
+    private lateinit var adapter: SurveyAdapter
+    private lateinit var boxList: ArrayList<Survey>
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -44,7 +47,7 @@ class HomeFragment : Fragment() {
         boxList = ArrayList()
         boxList.addAll(getDemoAppNames())
 
-        adapter = ArrayAdapter(context!!, android.R.layout.simple_list_item_1, boxList)
+        adapter = SurveyAdapter(context as Context, boxList)
         listView.adapter = adapter
 
         // Set up the search bar
@@ -63,8 +66,11 @@ class HomeFragment : Fragment() {
 
         // Set up item click listener
         listView.setOnItemClickListener { adapterView, root, i, l ->
-            val clickedItem: String = adapter.getItem(i) ?: "UNKNOWN"
-            val bundle = bundleOf("appName" to clickedItem)
+            val selected: Survey = adapter.getItem(i) as Survey
+            val bundle = bundleOf(
+                "appName" to selected.appName,
+                "numQuestions" to selected.numQuestions
+            )
             (activity as MainActivity).navigateTo(R.id.nav_survey, bundle)
         }
 

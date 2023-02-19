@@ -52,9 +52,6 @@ class MainActivity : AppCompatActivity() {
     fun navigateTo(fragmentId: Int, bundle: Bundle= bundleOf()) {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         navController.navigate(fragmentId, bundle)
-        if (fragmentId == R.id.nav_survey) {
-            title = "Survey: ${bundle.getString("appName", "Solvays")}"
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

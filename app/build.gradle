@@ -47,6 +47,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
 
+    // gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+
     // https://github.com/QuickBirdEng/SurveyKit#-library-setup
     implementation 'com.quickbirdstudios:survey:1.1.0'
 
