@@ -23,6 +23,10 @@ class AccountFragment : Fragment() {
 
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         val view: View = binding.root
+
+        // TODO: update the xml layout file and render the user's account balance.
+        //  Enable the user to update their payment address and refresh the balance
+
         return view
     }
 
