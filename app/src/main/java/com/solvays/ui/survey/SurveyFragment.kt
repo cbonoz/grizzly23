@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -90,6 +91,12 @@ class SurveyFragment : Fragment() {
                 (activity as MainActivity).navigateTo(R.id.nav_home)
             } else if (reason == FinishReason.Completed) {
                 // TODO: add success logic to remit payment to user's saved address.
+
+                val text = "Survey Completed!"
+                val duration = Toast.LENGTH_LONG
+                val toast = Toast.makeText(context, text, duration)
+                toast.show()
+
                 (activity as MainActivity).navigateTo(R.id.nav_home)
             }
         }

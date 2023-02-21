@@ -15,7 +15,7 @@ class SurveyHelper {
                 "Was the user interface of $appName visually appealing and user-friendly?",
                 "Could you describe any technical issues while using the $appName web application?",
                 "How likely are you to recommend the $appName web application to others?",
-                "Any other general comments you would like to add?",
+                "Any there any general comments you would like to share about the $appName application?",
                 "How satisfied are you with the speed of $appName?",
                 "Were the instructions provided within $appName clear and easy to understand?",
                 "Were you able to complete your tasks with $appName efficiently?",
